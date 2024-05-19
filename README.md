@@ -1,2 +1,2 @@
 # calculadora
-Calculadora simples feita com html, css e js
+Calculadora simples feita com html, js e tailwind
