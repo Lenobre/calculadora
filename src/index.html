@@ -19,10 +19,10 @@
     >
       <div class="flex flex-col text-right pb-10 pt-16">
         <span
-          class="text-primary-gray text-base"
+          class="text-primary-gray text-base min-h-8"
           id="calculator-register"
         ></span>
-        <span class="text-white text-2xl"></span>
+        <span class="text-white text-2xl min-h-9" id="calculator-output"></span>
       </div>
       <div class="flex gap-5 pt-14 text-center">
         <div class="flex flex-col gap-5">
@@ -30,6 +30,7 @@
             <li>
               <button
                 class="text-secondary-gray bg-tertiary-gray w-12 h-12 rounded-lg calculator-action"
+                data-action="clear"
               >
                 Ac
               </button>
@@ -37,13 +38,15 @@
             <li>
               <button
                 class="text-secondary-gray bg-tertiary-gray w-12 h-12 rounded-lg calculator-action"
+                data-action="backspace"
               >
-                <i class="fas fa-backspace"></i>
+                <i class="fas fa-backspace" data-action="backspace"></i>
               </button>
             </li>
             <li>
               <button
                 class="w-12 h-12 rounded-lg text-primary-blue bg-secondary-blue calculator-action"
+                data-signal="/"
               >
                 /
               </button>
@@ -53,6 +56,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="7"
               >
                 7
               </button>
@@ -60,6 +64,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="8"
               >
                 8
               </button>
@@ -67,6 +72,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="9"
               >
                 9
               </button>
@@ -76,6 +82,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="4"
               >
                 4
               </button>
@@ -83,6 +90,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="5"
               >
                 5
               </button>
@@ -90,6 +98,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="6"
               >
                 6
               </button>
@@ -99,6 +108,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="1"
               >
                 1
               </button>
@@ -106,6 +116,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="2"
               >
                 2
               </button>
@@ -113,6 +124,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="3"
               >
                 3
               </button>
@@ -122,6 +134,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-28 h-12"
+                data-number="0"
               >
                 0
               </button>
@@ -129,6 +142,7 @@
             <li>
               <button
                 class="bg-primary-dark rounded-lg font-semibold w-12 h-12"
+                data-number="."
               >
                 .
               </button>
@@ -140,6 +154,7 @@
             <li>
               <button
                 class="w-12 h-12 rounded-lg bg-secondary-blue text-xl calculator-action"
+                data-signal="*"
               >
                 *
               </button>
@@ -147,6 +162,7 @@
             <li>
               <button
                 class="bg-secondary-blue rounded-lg font-semibold w-12 h-12 calculator-action"
+                data-signal="-"
               >
                 -
               </button>
@@ -154,6 +170,7 @@
             <li class="flex-1">
               <button
                 class="bg-secondary-blue rounded-lg font-semibold w-12 h-full calculator-action"
+                data-signal="+"
               >
                 +
               </button>
@@ -161,6 +178,7 @@
             <li class="flex-1">
               <button
                 class="bg-tertiary-blue text-quaternary-blue rounded-lg font-semibold w-12 h-full calculator-action"
+                data-action="calculate"
               >
                 =
               </button>
